@@ -1,0 +1,38 @@
+mkdir lab1
+cd lab1
+git init
+touch first.txt
+git add *.txt
+git status
+git commit -m "First commit"
+git remote add origin https://github.com/AlesiaPr/FirstProject.git
+git push origin master
+git checkout -b develop
+git push origin develop
+git checkout -b new-branch
+//add 1'st line to first.txt manually
+git add .
+git commit -m "Second commit"
+git push origin new-btanch
+cd ..
+mkdir part2
+cd part2
+git clone https://github.com/AlesiaPr/FirstProject.git
+git checkout develop
+git checkout -b new-branch-2
+//add 1'st line to first.txt manually
+git add .
+git commit -m "Third commit"
+git push origin new-branch-2
+git checkout develop
+git merge new-branch
+git push origin develop
+git merge new-branch-2
+//solve conflict manually
+git commit -m "Solve conflict"
+git push origin develop
+
+
+
+
+
